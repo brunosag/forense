@@ -2,8 +2,8 @@
 
 import { redirect } from 'next/navigation';
 import { useSession } from 'next-auth/react';
-import ProfileHeader from '@/app/profile/profile-header';
-import ProfileTabs from '@/app/profile/profile-tabs';
+import ProfileHeader from '@/app/components/profile/profile-header';
+import ProfileTabs from '@/app/components/profile/profile-tabs';
 
 export default function Home() {
   const session = useSession();

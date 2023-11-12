@@ -1,7 +1,7 @@
 import { Avatar, AvatarFallback, AvatarImage } from '@/app/components/ui/avatar';
 import { getInitials } from '@/app/lib/utils';
 import { signOut, useSession } from 'next-auth/react';
-import { Button } from '../components/ui/button';
+import { Button } from '../ui/button';
 
 export default function ProfileHeader() {
   const session = useSession();
