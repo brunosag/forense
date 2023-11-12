@@ -10,6 +10,12 @@ export const metadata: Metadata = {
   title: 'forense',
 };
 
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  minimumScale: 1,
+};
+
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   const session = await getServerSession();
 

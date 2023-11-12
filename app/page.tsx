@@ -1,8 +1,9 @@
 'use client';
 
-import { Button } from '@/app/components/ui/button';
 import { redirect } from 'next/navigation';
-import { signOut, useSession } from 'next-auth/react';
+import { useSession } from 'next-auth/react';
+import ProfileHeader from '@/app/profile/profile-header';
+import ProfileTabs from '@/app/profile/profile-tabs';
 
 export default function Home() {
   const session = useSession();
@@ -11,20 +12,10 @@ export default function Home() {
     redirect('/login');
   }
 
-  const handleLogout = () => {
-    signOut();
-  };
-
   return (
-    <div className="container min-h-screen flex flex-col gap-5 items-center justify-center text-center">
-      <div>
-        <p className="text-2xl">
-          Logged in as <span className="font-medium">{session.data.user?.name || '?'}</span>
-        </p>
-      </div>
-      <Button onClick={handleLogout} size="sm">
-        Logout
-      </Button>
+    <div className="container min-w-fit">
+      <ProfileHeader />
+      <ProfileTabs />
     </div>
   );
 }
