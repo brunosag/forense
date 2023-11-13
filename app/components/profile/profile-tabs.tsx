@@ -7,7 +7,7 @@ export default function ProfileTabs() {
 
   return (
     <Tabs defaultValue="feed" className="my-7">
-      <TabsList className="flex flex-col md:flex-row lg:grid lg:grid-cols-5 h-fit">
+      <TabsList className="flex flex-col lg:flex-row xl:grid xl:grid-cols-5 h-fit">
         <TabsTrigger value="feed" className="w-full">
           Feed
         </TabsTrigger>

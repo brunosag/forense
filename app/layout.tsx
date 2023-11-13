@@ -1,6 +1,7 @@
 import '@/app/globals.css';
 import { getServerSession } from 'next-auth';
 import { Inter } from 'next/font/google';
+import NavMenu from '@/app/components/nav-menu/nav-menu';
 import SessionProvider from '@/app/components/context/session-provider';
 import type { Metadata } from 'next';
 
@@ -22,7 +23,12 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   return (
     <html lang="en">
       <body className={inter.className}>
-        <SessionProvider session={session}>{children}</SessionProvider>
+        <SessionProvider session={session}>
+          <div className="flex min-h-screen">
+            <NavMenu />
+            {children}
+          </div>
+        </SessionProvider>
       </body>
     </html>
   );

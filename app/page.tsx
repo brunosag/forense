@@ -13,7 +13,7 @@ export default function Home() {
   }
 
   return (
-    <div className="container min-w-fit">
+    <div className="container min-w-fit md:min-w-0">
       <ProfileHeader />
       <ProfileTabs />
     </div>
